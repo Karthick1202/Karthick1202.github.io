@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ima{
+            height: 360px;
+            width:350px;
+        }
+        .container{
+            display: flex;
+        }
+        .image{
+            width: 50%;
+        }
+        .content{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mobile Details</h1><br><br>
+    <div class="container">
+    <div class="image"><img src="{{data.image.url}}" alt="" id="ima"></div>
+    <div class="content">
+        <br><br><br><br>
+    <h1>{{data.brand}}  {{data.model}} ({{data.colour}},{{data.memory}}GB )</h1>
+    <h1>Rs.{{data.price}}</h1>
+    </div>
+    <h1><a href="{%url 'amazonall'%}">Return Home Page</a></h1>
+</div>
+</div>
+</body>
+</html>

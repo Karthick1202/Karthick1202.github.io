@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ima{
+            height: 160px;
+            width:150px;
+        }
+       .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px;
+        width: 92%;
+        }
+
+        .content{
+        padding: 10px;
+        width: 48%;
+        text-decoration: none;
+        color: black;
+        }
+        #price{
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <h1>Results</h1>
+    {%for i in data%}
+    <div class="container">
+    <div class="image">
+        <a href="{%url 'amazonone' i.id%}">
+        <img src="{{i.image.url}}" alt="" id="ima">
+    </div>
+    <div class="content">
+        <h2>
+        <a href="{%url 'amazonone' i.id%}" style="text-decoration: none;color:black ;">
+        {{i.brand}} {{i.model}}<br>
+        <h2 id="price">Rs.{{i.price}}</h2>
+    </a></h2>
+    </div>
+    {%endfor%}
+</div>
+</body>
+</html>

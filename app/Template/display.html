@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image{
+            height: 300px;
+            width:500px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mobile Details</h1>
+    <div><img src="{{data.image.url}}" alt="" id="image">
+    <h1>Name:{{data.brand}}</h1>
+    <h1>Model:{{data.model}}</h1>
+    <h1>color:{{data.colour}}</h1>
+    <h1>price:{{data.price}}</h1>
+    <h1>memory:{{data.memory}}</h1>
+</div>
+</body>
+</html>
